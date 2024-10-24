@@ -1,0 +1,158 @@
+.tech {
+   height: auto; /* Allow the height to adjust based on content */
+   width: 90%; /* Use relative width for responsiveness */
+   max-width: 800px; /* Set a maximum width */
+   margin: 0 auto; /* Center the tech section */
+}
+
+.show-tut {
+   display: flex; /* Keep flex display */
+   margin: 0; /* Maintain original margin */
+   gap: 10px; /* Keep the gap */
+   padding: 10px; /* Maintain padding */
+   background: #071524; /* Keep the background color */
+}
+.video-tut{
+   width: 990px;
+   height: 500px;
+}
+.data-content {
+   margin: 10px;
+   border: 1px solid wheat; /* Keep the border */
+   padding: 10px;
+   border-radius: 10px; /* Maintain rounded corners */
+   width: 900px;
+}
+
+.content {
+   overflow-y: auto; /* Keep auto for vertical scroll */
+   max-height: 500px; /* Maintain maximum height */
+   border-radius: 20px; /* Keep the rounded corners */
+   margin: 0; /* Maintain margin */
+}
+
+
+.button-style-content {
+   width: 100%; /* Use 100% width for flexibility */
+   max-width: 600px; /* Set a max width */
+   height: 120px; /* Keep height consistent */
+   background: #071524; /* Keep background color */
+   border: 1px solid wheat; /* Keep border */
+   border-radius: 15px; /* Maintain rounded corners */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Keep transitions */
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Keep shadow */
+   display: flex; /* Maintain flex display */
+   gap: 10px; /* Keep gap */
+   text-overflow: ellipsis; /* Keep ellipsis for overflow text */
+   cursor: pointer; /* Change cursor to pointer */
+}
+
+.button-style-content:hover {
+   background: darkslategrey !important; /* Maintain hover effect */
+}
+
+.button-style-content img {
+   margin: 0; /* Keep margin */
+   width: 150px; /* Keep fixed width for images */
+   object-fit: cover; /* Maintain image cover style */
+   height: 90px; /* Keep fixed height */
+}
+
+.button-content-description {
+   color: black; /* Maintain text color */
+}
+
+.course-description {
+   object-fit: cover; /* Keep image cover style */
+}
+
+.enr-card {
+   width: auto; /* Maintain width */
+   height: 150px; /* Keep height */
+   display: flex; /* Maintain flex display */
+   border-radius: 20px; /* Keep rounded corners */
+   margin: 20px; /* Maintain margin */
+   position: relative; /* Keep relative positioning */
+   gap: 20px; /* Keep gap */
+}
+
+.cov-img {
+   width: 18rem; /* Keep fixed width */
+   height: 150px; /* Keep fixed height */
+   margin: 0; /* Keep margin */
+   position: relative; /* Keep relative positioning */
+   left: 0; /* Keep position */
+}
+
+.enr-dis {
+   height: 150px; /* Keep height */
+   width: 50rem; /* Keep width */
+}
+
+.data-content h1 {
+   color: beige; /* Maintain heading color */
+}
+
+.show-tut h1 {
+   color: beige; /* Maintain heading color */
+}
+
+#media-player_html5_api {
+   border: 2px solid; 
+   height: 500px;
+   width: 990px;
+}
+
+.course-description-content {
+   color: #e0e0e0; /* Keep text color */
+}
+
+.name h1 {
+   background: #071524; /* Maintain background color */
+   margin: 0; /* Keep margin */
+   color: #e0e0e0; /* Keep text color */
+}
+
+.cont {
+   background: #071524; /* Maintain background color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+   .show-tut {
+      flex-direction: column; /* Change to column for small screens */
+   }
+
+   .button-style-content {
+      height: auto; /* Allow height to adjust on small screens */
+   }
+
+   .button-style-content img {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Responsive height */
+   }
+
+   .enr-card {
+      flex-direction: column; /* Stack card items vertically */
+      align-items: center; /* Center content */
+      height: auto; /* Allow height to adjust */
+   }
+
+   .cov-img, .enr-dis {
+      width: 100%; /* Full width for images and description */
+      height: auto; /* Responsive height */
+   }
+
+   .data-content h1,
+   .show-tut h1 {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+   }
+}
+
+@media (max-width: 480px) {
+   .data-content h1,
+   .show-tut h1 {
+      font-size: 1rem; /* Further adjust font size for very small screens */
+   }
+}
+   

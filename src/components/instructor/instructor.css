@@ -1,0 +1,128 @@
+/* .instructor-page{
+   border: 2px solid black;
+   margin: 0%;
+   width: 100%;
+   height: 7rem;
+   padding: 20px;
+
+} */
+.container{
+   height: 100%;
+   width: 100%;
+}
+/* Main Header Container */
+.desktop-header-module--header--a5wri {
+   display: flex;
+   align-items: center;
+   padding: 10px 20px;
+   background-color: #f8f9fa;
+ }
+ 
+ /* Dropdown Container */
+ .desktop-header-module--gap-button--4drhI {
+   margin-left: 20px;
+   position: relative;
+ }
+ 
+ /* Dropdown Button */
+ .desktop-header-module--dropdown-button--ipas9 {
+   border: 1px solid #ccc;
+   padding: 8px 16px;
+   border-radius: 4px;
+   background-color: white;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+ }
+ 
+ /* Dropdown Button Text */
+ .desktop-header-module--dropdown-button-text--Sq73l {
+   margin-left: 8px;
+ }
+ 
+ /* Dropdown Menu Content */
+ .popper-module--popper-content--XE9z5 {
+   position: absolute;
+   background-color: white;
+   border: 1px solid #ddd;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   z-index: 1000;
+   width: 200px;
+ }
+ 
+ /* Dropdown Menu Animation Wrapper */
+ .popper-module--animation-wrapper--tM0UK {
+   padding: 10px;
+ }
+ 
+ /* Popover */
+ .popover-module--popover--HrSFz {
+   background-color: white;
+   border-radius: 4px;
+   padding: 10px;
+ }
+ 
+ /* Popover Inner Content */
+ .popover-module--inner--yQvGI {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ /* Header Menu */
+ .ud-header-menu {
+   margin-bottom: 10px;
+ }
+ 
+ /* Panel Menu */
+ .panel-menu-module--panel--FrCW7 {
+   padding: 10px;
+   background-color: #f0f0f0;
+   border-radius: 4px;
+   font-size: 14px;
+   color: #333;
+ }
+ 
+ /* SVG Styling */
+ svg {
+   fill: currentColor;
+   vertical-align: middle;
+ }
+ 
+ /* Example Styling for the 'Student' and 'Notifications' Links */
+ .ud-btn {
+   font-size: 14px;
+   color: #333;
+   text-decoration: none;
+   display: inline-block;
+ }
+ 
+ .ud-btn:hover {
+   color: #007bff;
+ }
+ 
+ /* Avatar in Dropdown */
+ .user-profile-dropdown-module--dropdown-button-avatar--CffDQ {
+   background-color: #007bff;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 18px;
+   font-weight: bold;
+ }
+ 
+ .user-profile-dropdown-module--user-section--WncyJ {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .user-profile-dropdown-module--user-details--gQuWe {
+   margin-left: 10px;
+ }
+ 
+ .user-profile-dropdown-module--email--eLeEE {
+   font-size: 12px;
+   color: #666;
+ }
+ 

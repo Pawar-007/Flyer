@@ -1,0 +1,44 @@
+/* Styling for the loginFirst component */
+.loginFirst-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #f5f5f5;
+ }
+ 
+ .loginFirst-message {
+   text-align: center;
+   background-color: #ffffff;
+   padding: 40px;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .loginFirst-title {
+   font-size: 32px;
+   color: #333;
+   margin-bottom: 16px;
+ }
+ 
+ .loginFirst-text {
+   font-size: 18px;
+   color: #666;
+   margin-bottom: 24px;
+ }
+ 
+ .loginFirst-button {
+   display: inline-block;
+   background-color: #007bff;
+   color: white;
+   padding: 12px 24px;
+   border-radius: 4px;
+   text-decoration: none;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .loginFirst-button:hover {
+   background-color: #0056b3;
+ }
+ 

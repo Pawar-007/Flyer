@@ -1,0 +1,159 @@
+/* Main container for the course list */
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual course card */
+.courseList {
+  display: flex;
+  align-items: flex-start;
+  background-color: antiquewhite;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: all 0.3s ease;
+  gap: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.courseList:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.coverimage img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Course details container */
+.course-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+/* Course name */
+.coursename {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Course description */
+.course-description {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button container */
+.go-to-edit-course {
+  display: flex;
+  gap: 15px;
+}
+
+.go-to-edit-course button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-to-edit-course button:hover {
+  background-color: #0056b3;
+}
+
+.go-to-edit-course .delete-button {
+  background-color: #dc3545;
+}
+
+.go-to-edit-course .delete-button:hover {
+  background-color: #b02a37;
+}
+
+/* Footer styling */
+.inst-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* New course card */
+/* Container for the New Course card */
+.newcourse-card {
+  background: linear-gradient(135deg, #4a90e2, #50c878); /* Gradient background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+  max-width: 700px; /* Restrict width */
+  margin: 50px auto; /* Center the card */
+  color: white; /* White text color */
+  font-family: 'Arial', sans-serif; /* Clean font choice */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for the card */
+.newcourse-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Title styling */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #ff7e5f; /* Custom button color */
+  border: none; /* Remove default border */
+  border-radius: 25px; /* Rounded button */
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #ff9671; /* Lighter color on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+.inst-cont{
+  background-color: #1e2e46;
+}
+.container h1{
+  color: #f2f2f2;
+}

@@ -1,0 +1,139 @@
+.Register {
+   text-align: center;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   background-color: #e8f4fc;
+   align-items: center; /* Centers items vertically */
+}
+/* Basic styling for the signup page */
+.signup-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 60vh;
+   background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+ }
+ 
+ .signup-box {
+   background: white;
+   display: flex;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   width: 600px;
+   max-width: 600px; /* Limit the maximum width */
+   text-align: center;
+   gap: 10px;
+ }
+ 
+ h2 {
+   margin-bottom: 20px;
+   color: #333;
+ }
+ 
+ .form-group {
+   margin-bottom: 15px;
+   text-align: left;
+   
+ }
+ 
+ .form-group label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #555;
+ }
+ 
+ .form-group input {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-sizing: border-box;
+   font-size: 16px;
+ }
+ 
+ .error-message {
+   color: red;
+   margin-top: 10px;
+   font-size: 14px;
+ }
+ 
+ .signup-button {
+   width: 100%;
+   padding: 10px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   font-size: 18px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .signup-button:hover {
+   background-color: #0056b3;
+ }
+#form-page{
+  width: 400px;
+}
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.upload-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.upload-btn:active {
+  background-color: #3e8e41;
+}
+
+.file-input-for-profile {
+  display: none; /* Hide the default file input */
+}

@@ -1,0 +1,45 @@
+/* Footer.css */
+.footer {
+   background-color: #333; /* Dark background */
+   color: white; /* White text color */
+   padding: 20px; /* Padding around the footer */
+   text-align: center; /* Center align text */
+   align-items: end;
+ }
+ 
+ .footer-container {
+   max-width: 1200px; /* Max width for the container */
+   margin: 0 auto; /* Center the container */
+ }
+ 
+ .footer-heading h2 {
+   margin: 0;
+   font-size: 24px;
+   font-weight: bold;
+ }
+ 
+ .footer-heading p {
+   margin: 10px 0;
+   font-size: 14px;
+ }
+ 
+ .footer-links {
+   margin: 20px 0;
+ }
+ 
+ .footer-links a {
+   color: white;
+   text-decoration: none;
+   margin: 0 10px;
+   font-size: 14px;
+ }
+ 
+ .footer-links a:hover {
+   text-decoration: underline;
+ }
+ 
+ .footer-bottom p {
+   margin: 0;
+   font-size: 12px;
+ }
+ 

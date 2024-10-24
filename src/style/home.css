@@ -1,0 +1,50 @@
+.bodyClass {
+  min-height: 55vh;
+  margin: 0%;
+  
+}
+
+.website_image {
+  background-image: url('../../assets/home_page_image.jpg');
+  background-size: cover;
+  background-position: center;
+ background-color: aqua;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+.style_card {
+  width: 100%;
+  top: 30%; 
+  left: 18%;
+}
+
+.course_present {
+ margin: 0;
+ display: flex;
+ gap: 20px;
+ padding: 20px;
+ overflow-x: hidden;
+}
+
+.course_present button {
+ position: absolute;
+ bottom: 1px;
+}
+
+.course_card {
+ width: 18rem;
+ margin: 0.5rem;
+ height: 25rem;
+}
+
+.course_Heading {
+ margin: 10px;
+ color: black;
+}
+
+.cources {
+   background-color: lightseagreen;
+}

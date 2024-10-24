@@ -1,0 +1,73 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  backdrop-filter: blur(5px); /* Blur effect for background */
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+  padding: 30px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 300px; /* Fixed width for the box */
+  text-align: center; /* Center text in the box */
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #333; /* Dark text for contrast */
+  font-size: 28px; /* Larger heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+label {
+  display: block; /* Labels above inputs */
+  margin-bottom: 5px; /* Space between label and input */
+  color: #666; /* Gray color for labels */
+}
+
+input {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for inputs */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 10px; /* Space below error messages */
+}
+
+.login-button {
+  width: 100%; /* Full width for the button */
+  padding: 10px; /* Padding for button */
+  background-color: #5cb85c; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Larger font size for button */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.login-button:hover {
+  background-color: #4cae4c; /* Darker green on hover */
+}
+
+a {
+  display: inline-block; /* Inline link */
+  margin-top: 15px; /* Space above link */
+  color: #007bff; /* Link color */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}

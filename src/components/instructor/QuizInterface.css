@@ -1,0 +1,167 @@
+.quiz-container {
+   width: 80%; /* Changed from 120vh to a percentage to ensure responsiveness */
+   max-width: 900px; /* Limits the maximum width for better readability on large screens */
+   border: 2px solid black;
+   margin: 100px auto; /* Centered the container horizontally with top margin */
+   height: auto; /* Let the container height adapt to its content */
+   min-height: 80vh; /* Maintains a minimum height */
+   padding: 30px;
+   border-radius: 20px;
+   background-color: #e0f7fa; /* Slightly softer color than aqua for better readability */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle shadow to enhance depth */
+ }
+ 
+.quiz-slider {
+   border: 2px solid saddlebrown;
+   padding: 10px;
+   background-color: #f0f0f0; /* Softer, neutral background for contrast */
+   border-radius: 10px; /* Rounded edges for a smoother look */
+   margin-bottom: 15px; /* Added margin to space out multiple sliders */
+}
+ 
+.quiz-name {
+   font-size: 1.2rem; /* Increased font size for better readability */
+   border: 1px solid black; /* Reduced border thickness to make it less harsh */
+   padding: 10px;
+   border-radius: 10px; /* Rounded corners for a more modern look */
+   text-align: center; /* Centered the text within */
+   background-color: #fff; /* Added background color for contrast */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+ 
+.button-save {
+   display: flex;
+   justify-content: center; /* Centered the button(s) horizontally */
+   align-items: center;
+   padding: 10px 20px; /* Added padding for a bigger clickable area */
+   border-radius: 5px; /* Slight rounding for a cleaner button appearance */
+   color: white; /* White text for better contrast */
+   cursor: pointer; /* Pointer cursor to indicate it's clickable */
+   transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+}
+ 
+/* General Score Page Styling */
+.display-score {
+   padding: 30px;
+   background-color: #f3f4f6; /* Light background for the whole section */
+   border-radius: 12px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   max-width: 80%;
+   margin: 0 auto; /* Center the content */
+ }
+ 
+ /* Section Title */
+ .display-score h1 {
+   font-size: 2em;
+   color: #333;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ 
+ /* Correct Answers Section */
+ .correctSelct {
+   padding: 20px;
+   background-color: #e5ffe5; /* Light green background */
+   border-radius: 10px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   margin-top: 20px;
+ }
+ 
+ .correctSelct h1 {
+   font-size: 1.8em;
+   color: #28a745; /* Green color to match the correct theme */
+   border-bottom: 2px solid #28a745; /* Underline effect */
+   padding-bottom: 5px;
+   margin-bottom: 15px;
+ }
+ 
+ /* Incorrect Answers Section */
+ .wrongSelected {
+   padding: 20px;
+   background-color: #ffe5e5; /* Light red background */
+   border-radius: 10px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   margin-top: 20px;
+ }
+ 
+ .wrongSelected h1 {
+   font-size: 1.8em;
+   color: #dc3545; /* Red color to match the incorrect theme */
+   border-bottom: 2px solid #dc3545; /* Underline effect */
+   padding-bottom: 5px;
+   margin-bottom: 15px;
+ }
+ 
+ /* Answer Card Styling */
+ .answer-card {
+   background-color: #ffffff; /* White background for better contrast */
+   padding: 15px;
+   border-radius: 8px;
+   border-left: 5px solid; /* Different colors for correct/incorrect */
+   margin-bottom: 15px; /* Space between cards */
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+   transition: transform 0.2s ease; /* Smooth hover effect */
+ }
+ 
+ .answer-card.correct {
+   border-color: #28a745; /* Green border for correct answers */
+ }
+ 
+ .answer-card.incorrect {
+   border-color: #dc3545; /* Red border for incorrect answers */
+ }
+ 
+ /* Hover Effect */
+ .answer-card:hover {
+   transform: scale(1.03);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+ }
+ 
+ /* Question Text Styling */
+ .question-text {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #333; /* Darker color for readability */
+   margin-bottom: 10px; /* Space below question */
+ }
+ 
+ /* Answer Details */
+ .answer-details {
+   display: flex;
+   flex-direction: column;
+   gap: 8px; /* Space between answers */
+ }
+ 
+ /* Your Answer and Correct Answer */
+ .your-answer, .correct-answer {
+   font-size: 1em;
+   color: #555; /* Neutral grey */
+   padding: 8px;
+   border-radius: 5px;
+   transition: background-color 0.2s ease; /* Smooth hover effect */
+ }
+ 
+ /* Your Answer Styling */
+ .your-answer {
+   background-color: #ffcccc; /* Light red for incorrect background */
+ }
+ 
+ /* Correct Answer Styling */
+ .correct-answer {
+   background-color: #ccffcc; /* Light green for correct background */
+   border: 1px solid #28a745; /* Subtle green border */
+   font-weight: bold; /* Bold to emphasize */
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+ }
+ 
+ /* Labels Styling */
+ .label {
+   font-weight: bold;
+   color: #dc3545; /* Red color to emphasize incorrect labels */
+ }
+ 
+ /* Correct Labels */
+ .correct-answer .label {
+   color: #28a745; /* Green color for correct labels */
+ }
+ 

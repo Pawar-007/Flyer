@@ -1,0 +1,82 @@
+/* FormPage.css */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Changed to stretch for better alignment */
+  margin: 2rem auto; /* Centering the container horizontally */
+  padding: 2rem;
+  background-color: #ffffff; /* Changed to white for a cleaner look */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Set max width to prevent excessive stretching */
+}
+
+h2 {
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+  color: #333;
+  font-size: 1.8rem; /* Larger font size for emphasis */
+  text-align: center; /* Center the title for aesthetics */
+}
+
+.form {
+  width: 100%; /* Full width to utilize space */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Increased bottom margin for spacing */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555; /* Slightly darker for better contrast */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly larger border radius for a softer look */
+  transition: border-color 0.3s; /* Smooth transition for focus state */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff; /* Highlighted border on focus */
+  outline: none; /* Remove default outline */
+}
+
+textarea {
+  height: 150px;
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 100px; /* Minimum height for usability */
+}
+
+.submit-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px; /* Match the input field's border radius */
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .form-container {
+      margin: 1rem; /* Reduce margins on smaller screens */
+      padding: 1.5rem; /* Adjust padding for mobile */
+  }
+
+  h2 {
+      font-size: 1.5rem; /* Smaller font size on mobile */
+  }
+}

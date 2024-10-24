@@ -1,0 +1,53 @@
+.create-course{
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.course-name {
+   display: flex; /* Use flexbox to arrange elements horizontally */
+   align-items: center; /* Vertically center the elements */
+   gap: 10px; /* Add spacing between the elements */
+ }
+ 
+ .course-name label {
+   /* Style the label as needed */
+   font-weight: bold;
+   color: #333;
+ }
+ 
+ .course-name input {
+   /* Style the input field as needed */
+   border: 1px solid #ccc;
+   padding: 5px;
+ }
+ .course-name textarea{
+   width: 500px;
+   height: 50px;
+ }
+#close-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: transparent;
+  border: none;
+  margin: 0%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#close-button:hover {
+  color: red;
+}
+#close-button button:hover{
+  color: #ccc;
+}
+
+

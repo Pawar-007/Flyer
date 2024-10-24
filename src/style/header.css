@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient( #071524, #1c324a); /* Gradient background */
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.header_title {
+  font-size: 2rem;
+  color: #f0e68c; /* Light color for contrast */
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  transition: color 0.3s ease; /* Transition effect */
+}
+
+.header_title:hover {
+  color: #ffe600; /* Color change on hover */
+}
+
+#SearchBar {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  width: 300px; /* Fixed width for search bar */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 20px; /* Spacing between nav items */
+}
+
+.nav-link {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.3s ease; /* Transition effect */
+}
+
+.nav-link:hover {
+  color: #ffe600; /* Color change on hover */
+}
+
+.instructor-page {
+  position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+.teach-more-dropdown {
+  position: absolute;
+  background:#f0e68c; /* Background color */
+  border: 1px solid #0c0c0c; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding */
+  z-index: 10; /* Ensure it appears above other elements */
+  color: #071524;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between items */
+}
+
+.profile-fit img {
+  width: 40px; /* Set a smaller size for profile image */
+  height: 40px; /* Set height to match width */
+  border-radius: 50%; /* Make the image circular */
+}
