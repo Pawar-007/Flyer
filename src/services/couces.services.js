@@ -1,8 +1,9 @@
 import token from "./../../src/token.js";
+const x=import.meta.env.VITE_SENDREQUEST;
 async function ThoughtCorse(token) {
   try {
     
-    const response = await fetch("http://localhost:8000/api2/v2/inst/thoughtCorse", {
+    const response = await fetch(`${x}/api2/v2/inst/thoughtCorse`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +31,7 @@ async function createCourse(token,name,description,courseid,coverImage){
     formData.append("description", description);
     formData.append("courseId", courseid);
     formData.append("coverImage", coverImage);
-    const addingCourse=await fetch("http://localhost:8000/api2/v2/inst/AddCourse",{
+    const addingCourse=await fetch(`${x}/api2/v2/inst/AddCourse`,{
       method:"POST",
       headers: {
         "Authorization":`Bearer : ${token}`
@@ -53,7 +54,7 @@ const addVideoTuto=async (token,courseId,videos, coverImages, descriptions)=>{
   form.append(`description${index}`, descriptions[index]); // Append descriptions
 });
 try {
-  const addedVideo=await fetch("http://localhost:8000/api2/v2/inst/add-course-video",
+  const addedVideo=await fetch(`${x}/api2/v2/inst/add-course-video`,
   {
     method:"POST",
     headers: {
@@ -72,7 +73,7 @@ try {
 const deleteVideoTut=async (courseId,url,imgpath)=>{
    try {
     console.log(courseId,url);
-    const deleted=await fetch("http://localhost:8000/api2/v2/inst/deletecontent",{
+    const deleted=await fetch(`${x}/api2/v2/inst/deletecontent`,{
       method:"POST",
       headers:{
         "Authorization":`Bearer : ${token}`,
@@ -94,7 +95,7 @@ const deleteVideoTut=async (courseId,url,imgpath)=>{
 }
 const addQuiz=async (quizdata)=>{
   try {
-    const quizAdded=await fetch("http://localhost:8000/api2/v2/inst/add-quiz",{
+    const quizAdded=await fetch(`${x}/api2/v2/inst/add-quiz`,{
        method:"POST",
        headers: {
           "Content-Type": "application/json" 
@@ -113,7 +114,7 @@ const addQuiz=async (quizdata)=>{
 }
 const updatePage=async(courseId)=>{
   try {
-    const ContentForUpdate=await fetch("http://localhost:8000/api2/v2/inst/returnVideo",{
+    const ContentForUpdate=await fetch(`${x}/api2/v2/inst/returnVideo`,{
       method:"POST",
       headers:{
         "Content-Type": "application/json",
@@ -132,7 +133,7 @@ const updatePage=async(courseId)=>{
 
 const addTest=async(courseId,quizdata)=>{
     try {
-      const response=await fetch("http://localhost:8000/api2/v2/inst/add-test",{
+      const response=await fetch(`${x}/api2/v2/inst/add-test`,{
         method:"POST",
         headers:{
         "Authorization":`Bearer : ${token}`,
@@ -155,7 +156,7 @@ const addTest=async(courseId,quizdata)=>{
 }
 const removeTest=async(courseId,testId)=>{
   try {
-    const response=await fetch("http://localhost:8000/api2/v2/inst/delete-test",{
+    const response=await fetch(`${x}/api2/v2/inst/delete-test`,{
       method:"POST",
       headers:{
       "Authorization":`Bearer : ${token}`,
@@ -179,7 +180,7 @@ const removeTest=async(courseId,testId)=>{
 // /delete-course
 const deleteCourse=async ({courseName,coverImage,_id,courseVideos})=>{
        try {
-        const deletedCourse=await fetch("http://localhost:8000/api2/v2/inst/delete-course",{
+        const deletedCourse=await fetch(`${x}/api2/v2/inst/delete-course`,{
           method:"POST",
           credentials:"include",
           headers:{
@@ -206,7 +207,7 @@ const deleteCourse=async ({courseName,coverImage,_id,courseVideos})=>{
 const submitTest=async (selectOption,testId,CourseId)=>{
      try {
       //console.log("testId",testId, "selected option ",selectOption," courseid ",CourseId)
-      const addTest=await fetch('http://localhost:8000/api2/v2/inst/submit-Test',{
+      const addTest=await fetch(`${x}/api2/v2/inst/submit-Test`,{
         method:"POST",
         credentials:"include",
         headers:{
@@ -228,8 +229,8 @@ const submitTest=async (selectOption,testId,CourseId)=>{
 
 const getScore=async({courseId,testId})=>{
    try {
-    console.log(process.env.ADDVIDEO)
-    const score=await fetch("http://localhost:8000/api2/v2/inst/get-score",{
+    console.log("env file",x);
+    const score=await fetch(`${x}/api2/v2/inst/get-score`,{
       method:"POST",
       credentials:"include",
       headers:{

@@ -1,6 +1,7 @@
+const x=import.meta.env.VITE_SENDREQUEST;
 const LoginUser=async (email, username, password)=>{
-   try {
-      const response = await fetch('http://localhost:8000/api/v1/loginUser', {
+   try {  
+      const response = await fetch(`${x}/api/v1/loginUser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,7 +19,7 @@ const LoginUser=async (email, username, password)=>{
 
 const logoutuser=async (token)=>{
   try {
-    const logout=await fetch("http://localhost:8000/api/v1/logout",{
+    const logout=await fetch(`${x}/api/v1/logout`,{
       method:"POST",
       credentials:"include",
       headers: {
@@ -38,7 +39,7 @@ const logoutuser=async (token)=>{
 const registerInstructor=async (contact,qualifications)=>{
 try {
   const token=localStorage.getItem("Token");
-  const register=await fetch("http://localhost:8000/api2/v2/inst/instructorRegistration",{
+  const register=await fetch(`${x}/api2/v2/inst/instructorRegistration`,{
     method:"POST",
     headers:{
       "Content-Type": "application/json",

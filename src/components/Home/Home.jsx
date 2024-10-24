@@ -66,6 +66,7 @@ function Home() {
             </div>
           </div>
         </div>
+        
       </div>
       <div className='cources'>
           <div className="course_Heading" 
