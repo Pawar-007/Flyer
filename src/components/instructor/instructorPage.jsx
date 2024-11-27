@@ -134,10 +134,13 @@ function InstructorPage() {
           
           {newCourseAdd ? <Outlet /> : null}
           <Newcourse />
+          <div className="footerForInst">
           <Footer />
+          </div>
+          
         </div>
       ) : (
-        <FormPage />
+        <FormPage /> 
       )
     ) : (
       <LoginFirst />

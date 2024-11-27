@@ -151,9 +151,16 @@
   background-color: #ff9671; /* Lighter color on hover */
   transform: translateY(-3px); /* Slight lift on hover */
 }
-.inst-cont{
+.inst-cont {
   background-color: #1e2e46;
 }
-.container h1{
+
+.container {
+  flex: 1; /* Allow this section to grow and fill space between header and footer */
+  padding: 20px;
+}
+
+.container h1 {
   color: #f2f2f2;
+  text-align: center;
 }

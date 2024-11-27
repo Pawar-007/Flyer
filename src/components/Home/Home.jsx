@@ -3,9 +3,12 @@ import image from '../../assets/e-learn-home.jpg'; // Ensure this path is correc
 import '../../style/home.css';
 import { useNavigate } from 'react-router-dom';
 import contentImage from '../../assets/e-learn-content.jpg'
+const service=import.meta.env.VITE_SENDREQUEST;
+
 const courses=async ()=>{
   try {
-    const response=await fetch("http://localhost:8000/api/v1/presentCourses");
+    const response=await fetch(`${service}/api/v1/presentCourses`);
+    console.log("response ",response);
    if(!response.ok){
     throw new Error("network response is not okk")
    }

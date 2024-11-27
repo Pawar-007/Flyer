@@ -1,8 +1,8 @@
 import token from "../token.js"
-
+const x=import.meta.env.VITE_SENDREQUEST
 const enrolement=async (courseId)=>{
    try {
-      const enrole=await fetch("http://localhost:8000/api/v1/enrole",{
+      const enrole=await fetch(`${x}/api/v1/enrole`,{
          method:"POST",
          credentials:"include",
          headers:{
@@ -21,7 +21,7 @@ const enrolement=async (courseId)=>{
 }
 const courseContent=async(courseId)=>{
    try {
-      const content = await fetch("http://localhost:8000/api/v1/course_detail",{
+      const content = await fetch(`${x}/api/v1/course_detail`,{
       method:"POST",
       headers:{
          "Authorization":`${token}`,
