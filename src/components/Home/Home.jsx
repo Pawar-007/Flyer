@@ -8,7 +8,6 @@ const service=import.meta.env.VITE_SENDREQUEST;
 const courses=async ()=>{
   try {
     const response=await fetch(`${service}/api/v1/presentCourses`);
-    console.log("response ",response);
    if(!response.ok){
     throw new Error("network response is not okk")
    }
@@ -43,17 +42,19 @@ function Home() {
     getCourse();
   },[])
    
-  function handleStart(item){
-     const courseData=item;
-     navigate("/Start-course",{
-      state:{
-        data:courseData._id,
-        image:courseData.coverImage,
-        description:courseData.description,
-        name:courseData.courseName
-      }
-     })
-  }
+function handleStart(item) {
+    const courseData = item;
+    // Save data to localStorage
+    localStorage.setItem("courseData", JSON.stringify({
+        id: courseData._id,
+        image: courseData.coverImage,
+        description: courseData.description,
+        name: courseData.courseName
+    }));
+
+    navigate("/Start-course");
+}
+
   return (
     <>
       <div className='bodyClass'>

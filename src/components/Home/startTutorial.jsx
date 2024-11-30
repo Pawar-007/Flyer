@@ -43,6 +43,7 @@ function Enrolement(){
   );
 }
 
+
 import './LoginFirst.css'; // Import the CSS file
 import { Link } from 'react-router-dom';
 function LoginFirst() {
@@ -62,7 +63,7 @@ function LoginFirst() {
 
 function StartTutorial() {
   const location=useLocation();
-  const course_Id=location.state?.data;
+  const [course_Id,setcourseID]=useState('');
   const [courseData,setCourseData]=useState('');
   let [latestvideo,setLatest]=useState([]);
   let [currentVideo,setCurrent]=useState(null);
@@ -78,13 +79,19 @@ function StartTutorial() {
   }
   useEffect(()=>{
      const fetchCourseContent=async ()=>{
+      const savedData = JSON.parse(localStorage.getItem("courseData"));
+            if (!savedData) {
+                console.error("No course data found");
+                return;
+            }
+            setcourseID(savedData.id);
       try {
-         const id=location.state?.data ;
+         const id=savedData.id;
          const response=await courseContent(id);
          if(response){
             isLoading(true);
          }
-         console.log({"courseID":id},{"response":response})
+
          if(response.ok){
           const videos = await response.json();
           setCourseData(videos.data);

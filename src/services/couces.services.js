@@ -229,7 +229,6 @@ const submitTest=async (selectOption,testId,CourseId)=>{
 
 const getScore=async({courseId,testId})=>{
    try {
-    console.log("env file",x);
     const score=await fetch(`${x}/api2/v2/inst/get-score`,{
       method:"POST",
       credentials:"include",
