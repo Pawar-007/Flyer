@@ -65,11 +65,12 @@ function StartTutorial() {
   useEffect(()=>{
      const fetchCourseContent=async ()=>{
       try {
-         const id= course_Id;
+         const id=location.state?.data ;
          const response=await courseContent(id);
          if(response){
             isLoading(true);
          }
+         console.log({"courseID":id},{"response":response})
          if(response.ok){
           const videos = await response.json();
           setCourseData(videos.data);
