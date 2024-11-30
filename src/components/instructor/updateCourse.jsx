@@ -120,7 +120,7 @@ export default function UpdateCourse() {
   return (
     <>
   {isLoading && <Spinner/>}
-  <div class="course-update-container">
+  <div className="course-update-container">
     <h1>Update Your Course Details</h1>
 </div>  
   <div className="update-course-container">
