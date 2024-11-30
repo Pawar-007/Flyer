@@ -42,11 +42,13 @@ function InstructorPage() {
   const [auth, setAuth] = useState(null);
   const [Token, setToken] = useState(null);
   const useNavigation = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
   const [newCourseAdd, setNewCourseAdd] = React.useContext(ContextCourse);
   const [, setCourseData] = React.useContext(courseContext);
 
   useEffect(() => {
     const fetchCourses = async () => {
+      setIsLoading(true);
       try {
         const token = localStorage.getItem('Token');
         setToken(token);
@@ -57,7 +59,6 @@ function InstructorPage() {
 
         const response = await ThoughtCorse(token);
         const item = await response.json();   
-
         
         if (response.ok) {
           setAuth(true);
@@ -68,14 +69,16 @@ function InstructorPage() {
         }
       } catch (err) {
         console.error('Error fetching courses:', err);
+      }finally {
+        setIsLoading(false); // Hide spinner
       }
     };
 
     fetchCourses();
   }, []);
-  if(auth==null){
-    return <Spinner />;
-  }
+  if(isLoading){
+    return <Spinner/>;
+}
   function handleUpdate(course, index) {
     const coursedata = course[index];
     setCourseData(coursedata);
