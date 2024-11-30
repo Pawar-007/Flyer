@@ -24,7 +24,7 @@ const courseContent=async(courseId)=>{
       const content = await fetch(`${x}/api/v1/course_detail`,{
       method:"POST",
       headers:{
-         "Authorization":`${token}`,
+         "Authorization":`${localStorage.getItem("Token")}`,
         "Content-Type": "application/json"
       },
       credentials:"include",
