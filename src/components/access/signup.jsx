@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../../style/signup.css"
 import { useNavigate } from 'react-router-dom';
-
+const x=import.meta.env.VITE_SENDREQUEST
 export default function Signup() {
    const [username,setUserName]=useState('');
    const [email,setEmail]=useState('');
@@ -33,7 +33,7 @@ async function handleSignup(username,email,password,confirmPassword,profilePhoto
         form.append('email', email);
         form.append('password', password);
         form.append('image', profilePhoto); 
-        const register=await fetch("http://localhost:8000/api/v1/studentRegistration",
+        const register=await fetch(`${x}/api/v1/studentRegistration`,
         {
           method:"POST",
           credentials:"include",
