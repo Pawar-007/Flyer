@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoginFirst.css'; // Import the CSS file
-
+import { Link } from 'react-router-dom';
 function LoginFirst() {
   return (
     <div className="loginFirst-container">
@@ -9,7 +9,7 @@ function LoginFirst() {
         <p className="loginFirst-text">
           You need to be logged in to view this page.
         </p>
-        <a href="/login" className="loginFirst-button">Login</a>
+        <Link to="/login" className="loginFirst-button" aria-label="Go to Login Page">Login</Link>
       </div>
     </div>
   );
