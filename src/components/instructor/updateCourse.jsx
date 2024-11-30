@@ -148,7 +148,7 @@ export default function UpdateCourse() {
               {courseData.courseVideos.map((item, index) => (
                 <div key={index} className="video-card-horizontal">
                   <div className="cover-image-set">
-                  <img
+                      <img
                     src={item.coverImage || courseData.coverImage} 
                     alt={`Video ${index + 1}`} 
                     className="video-thumbnail-horizontal"

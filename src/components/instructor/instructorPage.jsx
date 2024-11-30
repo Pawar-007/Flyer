@@ -10,6 +10,16 @@ import LoginFirst from '../Home/loginFirst.jsx';
 import { ContextCourse } from '../../contex/newCourseContext.jsx';
 import { courseContext } from '../../contex/courseContex.jsx';
 
+const Spinner = () => {
+  return (
+    <div className="spinner-container">
+      <div className="spinner-grow" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  );
+};
+
 const Newcourse = () => {
   const [newCourseAdd, setNewCourseAdd] = React.useContext(ContextCourse);
 
@@ -29,7 +39,7 @@ const Newcourse = () => {
 
 function InstructorPage() {
   const [courses, setCourses] = useState([]);
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(null);
   const [Token, setToken] = useState(null);
   const useNavigation = useNavigate();
   const [newCourseAdd, setNewCourseAdd] = React.useContext(ContextCourse);
@@ -53,7 +63,9 @@ function InstructorPage() {
           setAuth(true);
           setCourses(item.data);
         }
-
+        else{
+          setAuth(false);
+        }
       } catch (err) {
         console.error('Error fetching courses:', err);
       }
@@ -61,7 +73,9 @@ function InstructorPage() {
 
     fetchCourses();
   }, []);
-
+  if(auth==null){
+    return <Spinner />;
+  }
   function handleUpdate(course, index) {
     const coursedata = course[index];
     setCourseData(coursedata);
