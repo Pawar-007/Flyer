@@ -11,6 +11,7 @@
    gap: 10px; /* Keep the gap */
    padding: 10px; /* Maintain padding */
    background: #071524; /* Keep the background color */
+   min-height: 45rem;
 }
 .video-tut{
    width: 990px;
@@ -25,7 +26,8 @@
 }
 
 .content {
-   overflow-y: auto; /* Keep auto for vertical scroll */
+   overflow-y: auto;
+   min-height: 500px; /* Keep auto for vertical scroll */
    max-height: 500px; /* Maintain maximum height */
    border-radius: 20px; /* Keep the rounded corners */
    margin: 0; /* Maintain margin */

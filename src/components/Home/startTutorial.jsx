@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useContext } from 'react'
-import { Outlet, useActionData, useLocation, useNavigate } from 'react-router-dom'
+import { json, Outlet, useActionData, useLocation, useNavigate } from 'react-router-dom'
 import {courseContent} from './../../services/user.services.js'
 import { enrolement } from './../../services/user.services.js'
 import { UserContext } from '../../contex/userContext.js'
@@ -7,11 +7,12 @@ import StartTest from '../instructor/startTest.jsx'
 import { getScore } from '../../services/couces.services.js'
 import './start.css'
 function Enrolement(){
-   const data=useLocation();
-   const id=data.state?.data;
-   const img=data.state?.image;
-   const discription=data.state?.description;
-   const coursename=data.state?.name;
+   const data=JSON.parse(localStorage.getItem("courseData"));
+   console.log(data);
+   const id=data.id;
+   const img=data.image;
+   const discription=data.description;
+   const coursename=data.name;
 
   async function handleEnrolement(e){
      try {

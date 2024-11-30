@@ -44,7 +44,7 @@ function Home() {
    
 function handleStart(item) {
     const courseData = item;
-    // Save data to localStorage
+    console.log("item",item)
     localStorage.setItem("courseData", JSON.stringify({
         id: courseData._id,
         image: courseData.coverImage,

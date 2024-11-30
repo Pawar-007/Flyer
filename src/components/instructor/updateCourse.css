@@ -101,13 +101,13 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* .video-thumbnail-horizontal {
-  width: 120px;
-  height: auto;
+.video-thumbnail-horizontal {
+  width: 260px;
+  height: 180px;
   border-radius: 8px;
   margin-right: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
+}
 
 .watch-delete{
   display: flex;
