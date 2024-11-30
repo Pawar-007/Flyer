@@ -2,7 +2,6 @@ import React, { useEffect, useState,useContext } from 'react'
 import { Outlet, useActionData, useLocation, useNavigate } from 'react-router-dom'
 import {courseContent} from './../../services/user.services.js'
 import { enrolement } from './../../services/user.services.js'
-import LoginFirst from './loginFirst.jsx'
 import { UserContext } from '../../contex/userContext.js'
 import StartTest from '../instructor/startTest.jsx'
 import { getScore } from '../../services/couces.services.js'
@@ -44,6 +43,21 @@ function Enrolement(){
   );
 }
 
+import './LoginFirst.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
+function LoginFirst() {
+  return (
+    <div className="loginFirst-container">
+      <div className="loginFirst-message">
+        <h1 className="loginFirst-title">Access Restricted</h1>
+        <p className="loginFirst-text">
+          You need to be logged in to view this page.
+        </p>
+        <Link to="/login" className="loginFirst-button" aria-label="Go to Login Page">Login</Link>
+      </div>
+    </div>
+  );
+}
 
 
 function StartTutorial() {
