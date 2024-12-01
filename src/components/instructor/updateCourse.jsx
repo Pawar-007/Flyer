@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './updateCourse.css'; 
-import { Link } from 'react-router-dom';
 import { addVideoTuto,deleteVideoTut, updatePage,removeTest} from '../../services/couces.services';
 import token from '../../token.js';
 import { Outlet } from 'react-router-dom';

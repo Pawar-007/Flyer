@@ -9,16 +9,7 @@ import Footer from './../footer/Footer.jsx';
 import LoginFirst from '../Home/loginFirst.jsx';
 import { ContextCourse } from '../../contex/newCourseContext.jsx';
 import { courseContext } from '../../contex/courseContex.jsx';
-
-const Spinner = () => {
-  return (
-    <div className="spinner-container">
-      <div className="spinner-grow" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
-    </div>
-  );
-};
+import { Spinner } from '../Home/spinner.jsx';
 
 const Newcourse = () => {
   const [newCourseAdd, setNewCourseAdd] = React.useContext(ContextCourse);

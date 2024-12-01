@@ -3,6 +3,7 @@ import image from '../../assets/e-learn-home.jpg'; // Ensure this path is correc
 import '../../style/home.css';
 import { useNavigate } from 'react-router-dom';
 import contentImage from '../../assets/e-learn-content.jpg'
+import {LoadingOverlay } from './spinner.jsx';
 const service=import.meta.env.VITE_SENDREQUEST;
 
 const courses=async ()=>{
@@ -33,11 +34,17 @@ function subString(item){
 function Home() {
   const [coursesData,setCoursesData]=useState({data:[]});
   const navigate = useNavigate();
-
+  const [isLoading,setIsLoading]=useState(true);
   useEffect(()=>{
     const getCourse=async ()=>{
-      const data=await courses();
-      setCoursesData(data);
+       try {
+        const data = await courses(); // Assuming `courses` is an API call that fetches data.
+        setCoursesData(data);
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      } finally {
+        setIsLoading(false);
+      }
     }
     getCourse();
   },[])
@@ -87,6 +94,8 @@ function handleStart(item) {
             height: '500px'  
           }}>
           {
+            isLoading?
+            <LoadingOverlay/>:
             coursesData?.data.map((items,index)=>(
               <div className=" course_card card" key={index} style={{width: 18+"rem" }}>
               <img src={items.coverImage} className="card-img-top" alt="coverImage"/>
