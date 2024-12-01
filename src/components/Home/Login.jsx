@@ -31,7 +31,7 @@ const LoginPage = ({ email, setEmail, username, setUsername, password, setPasswo
               onChange={(e) => setUsername(e.target.value)}
               required
             />
-          </div>
+          </div> 
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
