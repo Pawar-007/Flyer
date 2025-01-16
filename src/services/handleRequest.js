@@ -29,7 +29,7 @@ const logoutuser=async (token)=>{
       },
      
     })
-    console.log("logout ",logout)
+    
     return logout;
   } catch (error) {
     console.error(error);

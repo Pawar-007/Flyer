@@ -13,7 +13,6 @@ const enrolement=async (courseId)=>{
             courseId:courseId
          })
       })
-      console.log("enrolement",enrole);
       return enrole;
    } catch (error) {
       return error;

@@ -8,7 +8,7 @@ import { getScore } from '../../services/couces.services.js'
 import './start.css'
 function Enrolement(){
    const data=JSON.parse(localStorage.getItem("courseData"));
-   console.log(data);
+
    const id=data.id;
    const img=data.image;
    const discription=data.description;

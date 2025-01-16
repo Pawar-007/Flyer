@@ -86,9 +86,9 @@ function InstructorPage() {
       if (deleted.ok) {
         console.log("Deleted successfully");
       }
-      console.log("delete", deleted);
+     
       const deletedData = await deleted.json();
-      console.log("deleted data", deletedData);
+
     } catch (error) {
       console.error("Error deleting course:", error);
     }
