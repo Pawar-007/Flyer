@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,useContext} from 'react';
 import image from '../../assets/e-learn-home.jpg'; // Ensure this path is correct
 import '../../style/home.css';
 import { useNavigate } from 'react-router-dom';
 import contentImage from '../../assets/e-learn-content.jpg'
 import {LoadingOverlay } from './spinner.jsx';
+import { UserContext } from '../../contex/userContext.js';
+import { AuthContext } from '../access/authProvider.jsx';
 const service=import.meta.env.VITE_SENDREQUEST;
 
 const courses=async ()=>{
@@ -33,6 +35,8 @@ function subString(item){
 
 function Home() {
   const [coursesData,setCoursesData]=useState({data:[]});
+   const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
+  const {profilePhoto,setProfilePhoto}=useContext(AuthContext);
   const navigate = useNavigate();
   const [isLoading,setIsLoading]=useState(true);
   useEffect(()=>{
@@ -46,6 +50,30 @@ function Home() {
         setIsLoading(false);
       }
     }
+    const ifTokenExpire=async (token)=>{
+        try {
+          const expire=await fetch(`http://localhost:8000/api/v1/tokenVerify`,{
+            method: 'POST', 
+            headers: {
+            'Content-Type': 'application/json',
+           },
+           body: JSON.stringify({token}),
+           credentials: 'include',
+          })
+
+          if(!expire){
+            throw new error("request not send");
+          }
+          const data=await expire.json();
+          if(data.isExpire){
+            localStorage.removeItem("Token");
+            setIsLoggedIn(false);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+    }
+    ifTokenExpire(localStorage.getItem("Token"));
     getCourse();
   },[])
    

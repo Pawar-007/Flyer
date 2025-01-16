@@ -36,6 +36,7 @@ export default function Header() {
     try {
       // Call the logoutuser function with the token
       const userOut = await logoutuser(`${token}`);
+      console.log("userOut",userOut);
       if (userOut.ok) { 
         localStorage.removeItem("profilePhoto");
         localStorage.removeItem('Token');
@@ -43,6 +44,7 @@ export default function Header() {
         alert("Successfully logged out.");
       } else {
         console.error("Failed to log out:", userOut.statusText);
+        localStorage.removeItem('Token');
         alert("Logout failed. Please try again.");
       }
     } catch (error) {

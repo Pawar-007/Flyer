@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../contex/userContext.js';
 import { AuthContext } from '../access/authProvider.jsx';
 import avtar from './../../assets/smile-icon.png';
+
 const LoginPage = ({ email, setEmail, username, setUsername, password, setPassword, error, handleSubmit, logInUser}) => {
   return (
     <div className="login-container">
@@ -68,6 +69,7 @@ function Login() {
   useEffect(() => {
     // Check if the user is already logged in by looking for the token in localStorage
     const token = localStorage.getItem('Token');
+    
     if (token) {
       setIsLoggedIn(true);
     }
@@ -76,7 +78,7 @@ function Login() {
     try {
       const login = await LoginUser(email, username, password);
       const data = await login.json();
-    
+      
       if (login.ok) {
         localStorage.setItem("Token",data.token)
         setIsLoggedIn(true);
