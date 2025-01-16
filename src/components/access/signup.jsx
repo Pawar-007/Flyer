@@ -18,12 +18,11 @@ export default function Signup() {
      
     if (file) {
        const reader = new FileReader();
-       console.log("render",reader);
+  
        setFile(file);
        reader.onloadend = () => {
           set_ProfilePhoto(reader.result); // Set the uploaded image as the img src
        };
-       console.log("result",reader.result);
        reader.readAsDataURL(file); // Convert the file to a base64 URL
     }
  };
@@ -87,7 +86,7 @@ const handleSubmit = (e) => {
   handleSignup(email, username, password,confirmPassword,file);
   setError('');
   // Handle login logic here (e.g., API call)
-  console.log('Logging in with:', { email, username, password });
+
 };
 
   if(wait){

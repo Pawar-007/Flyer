@@ -36,7 +36,6 @@ export default function Header() {
     try {
       // Call the logoutuser function with the token
       const userOut = await logoutuser(`${token}`);
-      console.log("userOut",userOut);
       if (userOut.ok) { 
         localStorage.removeItem("profilePhoto");
         localStorage.removeItem('Token');

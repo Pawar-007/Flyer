@@ -65,7 +65,6 @@ function Home() {
             throw new error("request not send");
           }
           const data=await expire.json();
-          console.log("isexpire ",data.data);
           if(data.isExpire){
             localStorage.removeItem("Token");
             setIsLoggedIn(false);
