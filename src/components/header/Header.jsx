@@ -44,7 +44,6 @@ export default function Header() {
         alert("Successfully logged out.");
       } else {
         console.error("Failed to log out:", userOut.statusText);
-        localStorage.removeItem('Token');
         alert("Logout failed. Please try again.");
       }
     } catch (error) {
