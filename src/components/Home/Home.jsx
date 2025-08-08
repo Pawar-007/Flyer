@@ -3,7 +3,7 @@ import image from '../../assets/e-learn-home.jpg'; // Ensure this path is correc
 import '../../style/home.css';
 import { useNavigate } from 'react-router-dom';
 import contentImage from '../../assets/e-learn-content.jpg'
-import {LoadingOverlay } from './spinner.jsx';
+import {LoadingOverlay,AnimatedLoader} from './spinner.jsx';
 import { UserContext } from '../../contex/userContext.js';
 import { AuthContext } from '../access/authProvider.jsx';
 const service=import.meta.env.VITE_SENDREQUEST;
@@ -122,7 +122,7 @@ function handleStart(item) {
           }}>
           {
             isLoading?
-            <LoadingOverlay/>:
+            <AnimatedLoader/>:
             coursesData?.data.map((items,index)=>(
               <div className=" course_card card" key={index} style={{width: 18+"rem" }}>
               <img src={items.coverImage} className="card-img-top" alt="coverImage"/>

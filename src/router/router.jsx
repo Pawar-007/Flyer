@@ -11,9 +11,6 @@ import StartTutorial from '../components/Home/startTutorial.jsx';
 import StartTest from '../components/instructor/startTest.jsx';
 import InstructorHome from '../components/instructor/instructorHome.jsx'
 const Routers = createBrowserRouter([
-   //   createRoutesFromElements(
-   //    <Route path="/" element={<Layout/>}></Route>
-   //   )
    {
       path: '/',
       element: <Layout/>,

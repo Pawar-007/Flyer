@@ -26,7 +26,8 @@ export default function Header() {
     }
   }, []);
   async function handleLogout() {
-    const token = localStorage.getItem("Token"); // Retrieve the token from localStorage
+    const token = localStorage.getItem("Token"); 
+
     if (!token) {
       console.error("No token found for logout.");
       alert("You are not logged in.");
@@ -36,9 +37,9 @@ export default function Header() {
     try {
       // Call the logoutuser function with the token
       const userOut = await logoutuser(`${token}`);
-      if (userOut.ok) { 
         localStorage.removeItem("profilePhoto");
         localStorage.removeItem('Token');
+      if (userOut.ok) { 
         setIsLoggedIn(false);
         alert("Successfully logged out.");
       } else {
