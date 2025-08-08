@@ -88,6 +88,7 @@ function InstructorPage() {
       }
      
       const deletedData = await deleted.json();
+      await fetchCourses();
 
     } catch (error) {
       console.error("Error deleting course:", error);
