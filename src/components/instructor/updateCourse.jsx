@@ -86,6 +86,9 @@ export default function UpdateCourse() {
       }
       const data = await added.json(); // Parse the response as JSON if the status is OK
       console.log("Added response:", data.data);
+
+      await dataFetch();
+      
     } catch (error) {
       console.error("Error while adding video:", error);
     }finally {
@@ -110,7 +113,7 @@ export default function UpdateCourse() {
       const imgurl=e.target.dataset.image;
       console.log(courseId,url,imgurl);
       const delition=await deleteVideoTut(courseId,url,imgurl);
-      console.log("Deletion result:", delition);
+      
     } catch (error) {
       console.log(error);
     }
@@ -124,14 +127,14 @@ export default function UpdateCourse() {
 </div>  
   <div className="update-course-container">
       <div className="course-header">
-        <img src={courseData.coverImage} alt="Course Cover" className="course-cover-image" />
-        <h1>{courseData.courseName}</h1>
+        <img src={courseData?.coverImage} alt="Course Cover" className="course-cover-image" />
+        <h1>{courseData?.courseName}</h1>
       </div>
 
       <div className="course-details">
         <textarea
           name="description"
-          value={courseData.description}
+          value={courseData?.description}
           onChange={handleInputChange}
           className="course-description"
           rows="5"
@@ -148,7 +151,7 @@ export default function UpdateCourse() {
                 <div key={index} className="video-card-horizontal">
                   <div className="cover-image-set">
                       <img
-                    src={item.coverImage || courseData.coverImage} 
+                    src={item?.coverImage || courseData?.coverImage} 
                     alt={`Video ${index + 1}`} 
                     className="video-thumbnail-horizontal"
                   />
@@ -165,8 +168,8 @@ export default function UpdateCourse() {
                     <button
                     name='delete'
                     className="watch-video-button"
-                    value={item.videolink}
-                    data-image={`${item.coverImage}`}
+                    value={item?.videolink}
+                    data-image={`${item?.coverImage}`}
                     onClick={e=>handleDeletion(e,index)}
                     >delet video</button>
                     </div>
